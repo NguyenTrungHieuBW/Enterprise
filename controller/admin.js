@@ -1,5 +1,5 @@
 const express = require('express')
-const { insertObject, updateDocument, deleteObject, getDocumentById} = require('../model/databaseControl')
+const { insertObject, updateDocument, deleteObject, getDocumentById, getDocument} = require('../model/databaseControl')
 const router = express.Router()
 
 router.get('/users', async (req, res) => {
@@ -17,7 +17,7 @@ router.get('/deleteUser/:id', async (req, res) => {
 })
 
 router.post('/addUser',async (req,res)=>{
-    const name = req.body.txtname
+    const name = req.body.txtName
     const pass = req.body.txtPass
     const role = req.body.txtRole
     const email = req.body.txtEmail

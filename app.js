@@ -2,6 +2,7 @@ var express = require('express')
 const {} = require('./model/databaseControl')
 var app = express()
 
+var hbs = require('hbs')
 app.set('view engine','hbs')
 
 var publicDir = require('path').join(__dirname,'/public');
@@ -17,6 +18,7 @@ app.get('/',async (req,res)=>{
 app.get('/adminIndex', async (req, res) => {
     res.render('adminIndex')
 })
+
 
 const adminController = require('./controller/admin')
 app.use('/admin', adminController)

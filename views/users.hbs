@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<body style="background-color:rgb(152, 199, 224);"></body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+</head>
+<body>
+    <h1 align="center"><a href="/">ATN Store</a></h1>
+    <table align="center" border="1px" style="background-color:rgb(114, 191, 214);">
+        <tr>
+            <td width="200">Name</td>
+            <td width="100">Pass</td>
+            <td width="100">Role</td>
+            <td width="100">Email</td>
+            <td width="100"></td>
+            <td width="100"></td>
+        </tr>
+        {{#each model}}
+        <tr>
+            <td>{{name}}</td>
+            <td>{{pass}}</td>
+            <td>{{role}}</td>
+            <td>{{email}}</td>
+            <td><a href="/delete?pid={{_id}}">Delete</a></td>
+            <td><a href="/edit?pid={{_id}}">Update</a></td>
+        </tr>
+        {{/each}}
+        <tr><td colspan="6"  align="center"><a href="/admin/addUser">New Product</a></td></tr>
+        <tr><td colspan="6"  align="center"><a href="/search">Search Product</a></td></tr>
+    </table>
+</body>
+</html>

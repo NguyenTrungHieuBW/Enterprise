@@ -1,7 +1,7 @@
 const {MongoClient,ObjectId} = require('mongodb')
 
 const DATABASE_URL = "mongodb+srv://hieunt:EarthDefender@cluster0.vwoqw.mongodb.net/test"
-const DATABASE_NAME = 'myDatabase'
+const DATABASE_NAME = 'Enterprise'
 
 async function getDB() {
     const client = await MongoClient.connect(DATABASE_URL);
@@ -28,6 +28,12 @@ async function updateDocument(id, updateValues,collectionName){
 async function getDocumentById(id, collectionName){
     const dbo = await getDB()
     const result = await dbo.collection(collectionName).findOne({_id:ObjectId(id)})
+    return result;
+}
+
+async function getDocument(collectionName){
+    const dbo = await getDB()
+    const results = await dbo.collection(collectionName).find({}).toArray();
     return result;
 }
 
