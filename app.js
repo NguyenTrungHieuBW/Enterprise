@@ -32,6 +32,9 @@ app.use('/comment', ideaController)
 const emailController = require('./controller/email')
 app.use('/email', emailController)
 
+const staffController = require('./controller/staff')
+app.use('/staff', staffController)
+
 
 var PORT = process.env.PORT || 5000
 app.listen(PORT);

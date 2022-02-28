@@ -28,8 +28,8 @@ router.post('/addComment',async (req,res)=>{
         idea: idea,
         user: user,
     }
-    await insertObject("Users", objectToInsert)
-    res.redirect('/admin/users')
+    await insertObject("Comment", objectToInsert)
+    res.redirect('/admin/comment')
 })
 
 module.exports = router;
