@@ -34,7 +34,14 @@ async function getDocumentById(id, collectionName){
 async function getDocument(collectionName){
     const dbo = await getDB()
     const results = await dbo.collection(collectionName).find({}).toArray();
+    return results;
+}
+
+async function getCommentByIdea(id, collectionName){
+    const dbo = await getDB()
+    const result = await dbo.collection(collectionName).find({idea:id}).toArray();
     return result;
 }
 
-module.exports = {deleteObject, insertObject,updateDocument, getDocumentById}
+module.exports = {deleteObject, insertObject,updateDocument, getDocumentById, getDocument,
+    getCommentByIdea}

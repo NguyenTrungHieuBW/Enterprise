@@ -23,6 +23,13 @@ app.get('/adminIndex', async (req, res) => {
 const adminController = require('./controller/admin')
 app.use('/admin', adminController)
 
+const commentController = require('./controller/comment')
+app.use('/comment', commentController)
+
+const ideaController = require('./controller/idea')
+app.use('/comment', ideaController)
+
+
 var PORT = process.env.PORT || 5000
 app.listen(PORT);
 console.log("Server is running at " + PORT)

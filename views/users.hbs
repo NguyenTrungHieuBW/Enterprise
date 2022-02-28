@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<body style="background-color:rgb(152, 199, 224);"></body>
+<body style="background-color:rgb(152, 224, 220);"></body>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,7 @@
     <title>Home page</title>
 </head>
 <body>
-    <h1 align="center"><a href="/">ATN Store</a></h1>
+    <h1 align="center"><a href="/">Group 4</a></h1>
     <table align="center" border="1px" style="background-color:rgb(114, 191, 214);">
         <tr>
             <td width="200">Name</td>
@@ -20,8 +20,8 @@
         </tr>
         {{#each model}}
         <tr>
-            <td>{{name}}</td>
-            <td>{{pass}}</td>
+            <td>{{userName}}</td>
+            <td>{{password}}</td>
             <td>{{role}}</td>
             <td>{{email}}</td>
             <td><a href="/delete?pid={{_id}}">Delete</a></td>
