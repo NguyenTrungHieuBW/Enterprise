@@ -29,6 +29,9 @@ app.use('/comment', commentController)
 const ideaController = require('./controller/idea')
 app.use('/comment', ideaController)
 
+const emailController = require('./controller/email')
+app.use('/email', emailController)
+
 
 var PORT = process.env.PORT || 5000
 app.listen(PORT);

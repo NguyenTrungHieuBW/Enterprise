@@ -9,8 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@sendgrid/mail": "^7.6.1",
+    "@trycourier/courier": "^3.5.0",
     "express": "^4.17.3",
     "hbs": "^4.2.0",
-    "mongodb": "^4.3.1"
+    "mongodb": "^4.3.1",
+    "nodemailer": "^6.7.2"
   }
 }
